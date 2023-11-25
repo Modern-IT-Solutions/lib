@@ -37,10 +37,9 @@ class Panel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FocusTraversalGroup(
-      child: Card(
+      child: Container(
         margin: margin,
-        elevation: elevation,
-        color: backgroundColor ?? Theme.of(context).colorScheme.surfaceVariant.withOpacity(0.3),
+        color: backgroundColor ?? Colors.transparent,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -98,7 +97,6 @@ class PanelCard extends StatelessWidget {
   static BoxDecoration decoration(BuildContext context,
       [double shadowOpacity = 0.2]) {
     return BoxDecoration(
-      color: Theme.of(context).cardColor,
       borderRadius: BorderRadius.circular(borderRadius),
       boxShadow: shadowOpacity == 0
           ? null
