@@ -27,14 +27,15 @@ class _LoadingBoxState extends State<LoadingBox> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CircularProgressIndicator.adaptive(strokeWidth: 2),
-                SizedBox(height: 10),
+                // SizedBox(height: 10),
                 // Text('Loading...'),
-                SizedBox(
-                  width: 100,
+                // SizedBox(
+                //   width: 100,
 
-                  child: LinearProgressIndicator(
-                    minHeight: 2,
-                  )),
+                //   child: LinearProgressIndicator(
+                //     minHeight: 2,
+                //   ),
+                // ),
               ],
             ),
           ),
