@@ -8,6 +8,7 @@ export 'widgets/panel.dart';
 export 'widgets/flex_table.dart';
 export 'widgets/easy_tab.dart';
 export 'widgets/loading_box.dart';
+export 'widgets/sonner.dart';
 
 /// export the extensions inside the extensions folder
 export 'extensions/color.dart';

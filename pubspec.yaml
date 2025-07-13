@@ -1,6 +1,6 @@
 name: lib
 description: This is a library that contains all the common widgets and functions used in the project.
-version: 0.0.3
+version: 0.1.0
 homepage: https://github.com/physia/lib
 repository: https://github.com/physia/lib.git
 author: MohamadLounnas
@@ -8,8 +8,7 @@ org: Physia
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: '>=3.0.2 <4.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.9.0-211.0.dev <4.0.0'
 
 dependencies:
   flutter:
