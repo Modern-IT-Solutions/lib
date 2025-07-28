@@ -1,6 +1,6 @@
 name: lib
 description: This is a library that contains all the common widgets and functions used in the project.
-version: 0.2.0
+version: 0.2.1
 homepage: https://github.com/physia/lib
 repository: https://github.com/physia/lib.git
 author: MohamadLounnas

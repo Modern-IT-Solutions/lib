@@ -162,11 +162,13 @@ class _ScrollableAreaState extends State<ScrollableArea> {
     _notifier.value = notification;
     ScrollMetrics metrics = notification.metrics;
     // if reached the end of the list, call onLoadMore
-    if (widget.paginable && metrics.pixels == metrics.maxScrollExtent) {
+    // also if overscrolled, call onLoadMore
+    if (widget.paginable && (metrics.pixels == metrics.maxScrollExtent || metrics.pixels > metrics.maxScrollExtent)) {
       widget.onEnd?.call(metrics);
     }
     // if reached the top of the list, call onRefresh
-    if (widget.refreshable && metrics.pixels == 0) {
+    // also if overscrolled, call onRefresh
+    if (widget.refreshable && (metrics.pixels == 0 || metrics.pixels < 0)) {
       widget.onStart?.call(metrics);
     }
     // onMiddle of scrolling, call onMiddle
