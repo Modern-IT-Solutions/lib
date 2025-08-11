@@ -3,7 +3,6 @@ description: This is a library that contains all the common widgets and function
 version: 0.2.1
 homepage: https://github.com/physia/lib
 repository: https://github.com/physia/lib.git
-author: MohamadLounnas
 org: Physia
 # publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 

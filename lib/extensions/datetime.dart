@@ -3,7 +3,7 @@ extension DateTimeExtension on DateTime {
     DateTime currentDate = DateTime.now();
     Duration difference = currentDate.difference(this);
 
-    if (difference < Duration(days: 1)) {
+    if (difference < const Duration(days: 1)) {
       int hours = difference.inHours;
       int minutes = difference.inMinutes.remainder(60);
       String duration = (hours > 0)

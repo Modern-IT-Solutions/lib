@@ -54,7 +54,7 @@ class ScrollableArea extends StatefulWidget {
 }
 
 class _ScrollableAreaState extends State<ScrollableArea> {
-  ValueNotifier<ScrollNotification?> _notifier = ValueNotifier(null);
+  final ValueNotifier<ScrollNotification?> _notifier = ValueNotifier(null);
   late ScrollController? _controller;
   @override
   void initState() {
@@ -68,15 +68,15 @@ class _ScrollableAreaState extends State<ScrollableArea> {
 
   @override
   Widget build(BuildContext context) {
-    var _builder = widget.builder ??
+    var builder = widget.builder ??
         (BuildContext context, Widget child,
             ValueNotifier<ScrollNotification?> notifier) {
           return widget.scrollable
               ? SingleChildScrollView(
                   controller: _controller,
                   scrollDirection: widget.direction,
-                  child: child,
                   physics: const AlwaysScrollableScrollPhysics(),
+                  child: child,
                 )
               : child;
         };
@@ -97,7 +97,7 @@ class _ScrollableAreaState extends State<ScrollableArea> {
         children: [
           Align(
               alignment: _getAlignment(widget.alignment),
-              child: _builder(context, widget.child, _notifier)),
+              child: builder(context, widget.child, _notifier)),
           if (widget.scrollable || _controller != null) ...[
             if (widget.direction == Axis.horizontal) ...[
               Positioned(
@@ -271,7 +271,7 @@ class ScrollableAreaArrow extends StatelessWidget {
         builder: (context, value, child) {
           return AnimatedScale(
             scale: _getScale(context, value),
-            duration: Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 300),
             child: Center(
               child: FloatingActionButton.small(
                 heroTag: UniqueKey(),
@@ -282,7 +282,7 @@ class ScrollableAreaArrow extends StatelessWidget {
                     controller.animateTo(
                       value.metrics.pixels +
                           value.metrics.extentInside / 2 * dir * rate,
-                      duration: Duration(milliseconds: 200),
+                      duration: const Duration(milliseconds: 200),
                       curve: Curves.easeInOut,
                     );
                   }
@@ -369,8 +369,6 @@ extension QuarterTurns on ArrowDirection {
         return 3;
       case ArrowDirection.right:
         return 4;
-      default:
-        return 1;
     }
   }
   /// [Axis] for [ArrowDirection] to get the currect axis
@@ -383,8 +381,6 @@ extension QuarterTurns on ArrowDirection {
       case ArrowDirection.top:
         return Axis.vertical;
       case ArrowDirection.right:
-        return Axis.horizontal;
-      default:
         return Axis.horizontal;
     }
   }

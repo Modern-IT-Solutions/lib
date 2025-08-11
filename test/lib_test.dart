@@ -27,9 +27,9 @@ void main() {
           onPressed: null,
           child: Text("Hello"),
         ),
-        child: Text("Hello"),
         backgroundColor: Colors.red,
         elevation: 2,
+        child: Text("Hello"),
       ),
     );
 

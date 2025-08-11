@@ -58,6 +58,6 @@ class TextPlaceholder extends StatelessWidget {
                 ),
             ],
           )
-        : child ?? SizedBox();
+        : child ?? const SizedBox();
   }
 }

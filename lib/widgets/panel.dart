@@ -139,7 +139,7 @@ class PanelBar extends StatelessWidget {
   /// [icon] is the icon of the panel bar. its widget.
   final Widget? icon;
 
-  PanelBar({
+  const PanelBar({
     Key? key,
     this.title,
     this.subtitle,
@@ -179,7 +179,7 @@ class PanelBar extends StatelessWidget {
         if (action != null)
           ConstrainedBox(
               constraints: BoxConstraints.loose(
-                Size(100, 40),
+                const Size(100, 40),
               ),
               child: action!),
       ],

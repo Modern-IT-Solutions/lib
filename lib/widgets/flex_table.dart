@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 
 /// [FlexTable] is a table that use flex to layout the columns
@@ -124,8 +123,8 @@ class FlexTableItem extends StatelessWidget {
   }) {
     return FlexTableItem(
       key: key,
-      children: children,
       isHeader: true,
+      children: children,
     );
   }
 
@@ -141,7 +140,7 @@ class FlexTableItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var flexTable = FlexTable.of(context);
-    var childs = <Widget>[];
+    // removed unused local variable 'childs'
     
     return Row(
       children: [
@@ -161,7 +160,7 @@ class FlexTableItem extends StatelessWidget {
               var size = _getSizeOf(context, j);
               return Expanded(
                 flex: size.flex ?? 0,
-                child: Container(
+                child: SizedBox(
                   // random color
                   // color: Colors.primaries[j % Colors.primaries.length],
                   width: size.width,
