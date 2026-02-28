@@ -57,7 +57,7 @@
     },
     {
       "name": "leak_tracker",
-      "rootUri": "file:///Users/mohamad/.pub-cache/hosted/pub.dev/leak_tracker-11.0.1",
+      "rootUri": "file:///Users/mohamad/.pub-cache/hosted/pub.dev/leak_tracker-11.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -153,9 +153,9 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/mohamad/.pub-cache/hosted/pub.dev/vm_service-15.0.0",
+      "rootUri": "file:///Users/mohamad/.pub-cache/hosted/pub.dev/vm_service-15.0.2",
       "packageUri": "lib/",
-      "languageVersion": "3.3"
+      "languageVersion": "3.5"
     },
     {
       "name": "lib",
@@ -165,8 +165,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.10.0-110.0.dev",
+  "generatorVersion": "3.11.0-93.1.beta",
   "flutterRoot": "file:///Users/mohamad/dev/flutter",
-  "flutterVersion": "3.33.0-1.0.pre-1478",
+  "flutterVersion": "3.39.0-0.1.pre",
   "pubCache": "file:///Users/mohamad/.pub-cache"
 }
